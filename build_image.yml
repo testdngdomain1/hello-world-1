@@ -1,0 +1,7 @@
+---
+- hosts: ansible
+  tasks:
+  - name: Build Docker Image from Dockerfile
+    command: docker build . -t bijoyashis/myapp-image:TAG
+  - name: Push Image to DockerHub
+    command: docker push bijoyashis/myapp-image:TAG
