@@ -1,0 +1,6 @@
+---
+- hosts: kubernetes
+  user: root
+  tasks:
+  - name: Create Deployment and Service File on Kubernetes Cluster
+    command: kubectl apply -f kubernetes_cluster.yml
