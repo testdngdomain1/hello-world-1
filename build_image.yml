@@ -1,0 +1,7 @@
+---
+- hosts: ansible
+  tasks:
+  - name: Build Docker Image using Dockerfile
+    command: docker build . -t myapp-image:DOCKER_TAG
+    args:
+      chdir: /opt/Docker
