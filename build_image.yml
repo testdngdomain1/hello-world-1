@@ -1,9 +1,0 @@
----
-- hosts: ansible
-  tasks:
-  - name: Build Docker Image from Dockerfile
-    command: docker build . -t bijoyashis/myapp-image:TAG
-    args:
-      chdir: /opt/Docker/workspace/Deploy_To_Kubernetes_Using_Ansible_Pipeline_Project
-  - name: Push Image to DockerHub
-    command: docker push bijoyashis/myapp-image:TAG
