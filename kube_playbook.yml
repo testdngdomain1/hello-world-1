@@ -3,4 +3,4 @@
   user: root
   tasks:
   - name: Run Ansible Playbook to Deploy Image on Kubernetes Cluster
-    command:- kubectl apply -f /opt/Docker/kube_deploy.yml
+    command: kubectl apply -f /opt/Docker/kube_deploy.yml
