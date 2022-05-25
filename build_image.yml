@@ -4,4 +4,4 @@
   - name: Build Docker Image using Dockerfile
     command: docker build . -t myapp-image:DOCKER_TAG
     args:
-      chdir: /opt/Docker
+      chdir: /opt/Docker/workspace/Deploy_To_Kubernetes_Using_Ansible_Pipeline_Project
