@@ -1,0 +1,9 @@
+---
+- hosts: ansible
+  tasks:
+  - name: Build Docker Image Using Dockerfile
+    command: docker build . -t chodu-image:DOCKER_TAG
+    args:
+      chdir: /opt/Docker/workspace/Kubernetes/
+  - name: Push Image to Private Repository
+    command: docker push chodu-image:DOCKER_TAG
