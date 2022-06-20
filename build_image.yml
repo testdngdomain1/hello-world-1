@@ -3,5 +3,7 @@
   tasks:
   - name: Create Docker Image from Dockerfile
     command: docker build . -t 243684792514.dkr.ecr.us-east-1.amazonaws.com/choduchom:DOCKER_TAG
+    args:
+      chdir: /opt/project/workspace/Kubernetes-Pipeline
   - name: Push DOcker Image to ECR
     command: docker push 243684792514.dkr.ecr.us-east-1.amazonaws.com/choduchom:DOCKER_TAG
