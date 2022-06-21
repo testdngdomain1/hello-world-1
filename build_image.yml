@@ -1,0 +1,10 @@
+---
+- hosts: ansible
+  user: ansadmin
+  tasks:
+  - name: Build Docker Image using Dockerfile
+    command: docker build . -t 243684792514.dkr.ecr.us-east-1.amazonaws.com/choduapp:DOCKER_TAG
+    args:
+      chdir: /opt/Docker/workspace/Kubernetes-Pipeline
+  - name: Push Docker Image to AWS ECR
+    command: docker push 243684792514.dkr.ecr.us-east-1.amazonaws.com/choduapp:DOCKER_TAG
