@@ -5,6 +5,6 @@
   - name: Build Docker Image Using Dockerfile
     command: docker build . -t 732326935626.dkr.ecr.us-east-1.amazonaws.com/chodudefault:DOCKER_TAG
     args:
-        chdir: /opt/project/workspace/Kubernetes_ChoduBucket1_Pipeline
+        chdir: /opt/project/workspace/Kubernetes_ChoduBucketDefault_Pipeline
   - name: Push Docker Image to Private ECR Repository
     command: docker push 732326935626.dkr.ecr.us-east-1.amazonaws.com/chodudefault:DOCKER_TAG
